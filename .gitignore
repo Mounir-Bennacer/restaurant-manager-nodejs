@@ -103,4 +103,8 @@ dist
 # TernJS port file
 .tern-port
 
+.gitignore
+.vimspector.json
+nodemon.json
+
 config/*
