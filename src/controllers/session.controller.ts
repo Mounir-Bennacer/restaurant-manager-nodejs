@@ -3,7 +3,7 @@ import { validatePassword } from "../services/user.service";
 import { createSession } from "../services/session.service";
 
 export async function createUserSessionHandler(req: Request, res: Response) {
-  validate the email and password
+  // validate the email and password
   const user = await validatePassword(req.body);
 
   if (!user) {
@@ -14,4 +14,5 @@ export async function createUserSessionHandler(req: Request, res: Response) {
 
   // create a sessions
   const session = await createSession(user._id, req.get("user-agent") || "");
+  console.log(session);
 }

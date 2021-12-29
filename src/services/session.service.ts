@@ -9,7 +9,6 @@ import { findUser } from "./user.service";
 export async function createSession(
   userID: string,
   userAgent: string,
-  ip: string
 ): Promise<string> {
   const session = await Session.create({
     user: userID,
